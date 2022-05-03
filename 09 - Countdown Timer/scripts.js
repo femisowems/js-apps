@@ -29,7 +29,6 @@ function timer(seconds) {
 }
 
 function displayTimeLeft(seconds) {
-    console.log('ready to display time');
     const minutes = Math.floor(seconds / 60);
     const remainderSeconds  = seconds % 60;
     const display = `${minutes}:${remainderSeconds < 10 ? '0' : '' }${remainderSeconds}`;
