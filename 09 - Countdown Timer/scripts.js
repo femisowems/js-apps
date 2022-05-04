@@ -23,7 +23,6 @@ function timer(seconds) {
             clearInterval(countdown);
             return;
         }
-
         displayTimeLeft(secondsLeft);
     }, 1000);
 }
