@@ -3,10 +3,11 @@ const timerDisplay = document.querySelector('.display__time-left');
 const endTime = document.querySelector('.display__end-time');
 const buttons = document.querySelectorAll('[data-time]');
 const today = new Date();
-const currentTime = today.getHours()+':'+today.getMinutes();
+const mins = today.getMinutes();
+const hrs = today.getHours();
 
 timerDisplay.textContent = '00:00';  
-endTime.textContent= `The Current Time is ${currentTime}`;
+endTime.textContent= `The Current Time is ${hrs}:${mins < 10 ? '0' : ''}${mins}`;
 
 function timer(seconds) {
     clearInterval(countdown);
